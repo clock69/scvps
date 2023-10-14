@@ -26,7 +26,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC  $COLOR1 [00]$NC • GO BACK"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -p "  Select Options :  " colormenu 
@@ -43,7 +43,7 @@ echo -e " $COLOR1│$NC [INFO] TEAM BLUE Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"                                                                                                                          
 ;;
 02 | 2)
@@ -58,7 +58,7 @@ echo -e " $COLOR1│$NC [INFO] TEAM RED Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 ;;
 03 | 3)
@@ -73,7 +73,7 @@ echo -e " $COLOR1│$NC [INFO] TEAM YELLOW Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 ;;
 04 | 4)
@@ -88,7 +88,7 @@ echo -e " $COLOR1│$NC [INFO] TEAM CYAN Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 ;;
 05 | 5)
@@ -103,7 +103,7 @@ echo -e " $COLOR1│$NC [INFO] TEAM GREEN Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 ;;
 06 | 6)
@@ -118,7 +118,7 @@ echo -e " $COLOR1│$NC [INFO] TEAM MAGENTA Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • SAN •                 $COLOR1│$NC"
+echo -e "$COLOR1│${NC}                 • KWNLM •                 $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 ;;
 00 | 0)
