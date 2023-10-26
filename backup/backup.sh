@@ -41,7 +41,7 @@ zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
-link="https://drive.google.com/u/5/uc?id=${id}&export=download"
+link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 echo -e "
 Detail Backup 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
