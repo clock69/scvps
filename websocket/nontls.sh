@@ -21,7 +21,7 @@ echo "Progress..." | lolcat
 sleep 3
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-nontls https://raw.githubusercontent.com/myridwan/VVIP/ipuk/websocket/ws-nontls.py
+wget -q -O /usr/local/bin/ws-nontls https://raw.githubusercontent.com/clock69/scvps/main/websocket/ws-nontls.py
 chmod +x /usr/local/bin/ws-nontls
 
 # Installing Service
@@ -47,4 +47,3 @@ END
 systemctl daemon-reload
 systemctl enable ws-nontls
 systemctl restart ws-nontls
-
