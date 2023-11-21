@@ -1,12 +1,12 @@
 #!/bin/bash
 # =========================================
-UPDATE="https://raw.githubusercontent.com/clock69/scvps/main/update/update.sh"
+UPDATE="https://raw.githubusercontent.com/Paper890/mysc/main/update/update.sh"
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/clock69/izin/main/IP"
+data_ip="https://raw.githubusercontent.com/Paper890/izin/main/IP"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
@@ -32,11 +32,11 @@ clear
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/clock69/izin/main/IP | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Paper890/izin/main/IP | grep $MYIP | awk '{print $2}')
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/clock69/izin/main/IP | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/Paper890/izin/main/IP | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
@@ -67,6 +67,12 @@ export PURPLE='\033[0;35m'
 export CYAN='\033[0;36m'
 export LIGHT='\033[0;37m'
 export NC='\033[0m'
+
+colornow=$(cat /etc/ssnvpn/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m" 
+COLOR1="\033[1;36m"
+COLBG1="\e[1;97;101m"   
 
 #Status
 tram=$( free -h | awk 'NR==2 {print $2}' )
@@ -175,20 +181,18 @@ fi
 clear
 clear
 echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}                .::: INFORMASI VPS :::.         ${NC}           "
+echo -e "  ${COLBG1}                - INFORMASI VPS -                  ${NC}   "
 echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}  • Sever Uptime${NC}      =${YELLOW} $( uptime -p  | cut -d " " -f 2-10000 )${NC} "
-echo -e "${CYAN}  • Current Time${NC}      =${YELLOW} $( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 echo -e "${CYAN}  • Operating System${NC}  =${YELLOW} $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g')( $(uname -m))${NC}"
 echo -e "${CYAN}  • Current Domain${NC}    =${YELLOW} $( cat /etc/xray/domain )${NC}"
 echo -e "${CYAN}  • Server IP${NC}         =${YELLOW} ${ipsaya} ${NC}"
-echo -e "${CYAN}  • ISP-VPS${NC}           =${YELLOW} ${ISP} ${NC}"
+echo -e "${CYAN}  • ISP${NC}               =${YELLOW} ${ISP} ${NC}"
 echo -e "${CYAN}  • City${NC}              =${YELLOW} ${CITY} ${NC}"
-echo -e "${CYAN}  • RAM${NC}               =${YELLOW} ${totalram}MB ${NC}"
-echo -e "${CYAN}  • RESOURCE${NC}          =${YELLOW} $uram / $tram ${NC}"
+echo -e "${CYAN}  • Ram${NC}               =${YELLOW} ${totalram}MB ${NC}"
+echo -e "${CYAN}  • Resource${NC}          =${YELLOW} $uram / $tram ${NC}"
 echo -e "${CYAN}  • CPU USAGE${NC}         =${YELLOW} $cpu_usage ${NC}"
-echo -e "${CYAN}  • Clients Name${NC}      =${LIGHT} $Name ${NC}"
-echo -e "${CYAN}  • Script Exfire${NC}     =${RED} $dayleft Days ${NC}"
+echo -e "${CYAN}  • Owner SC${NC}          =${YELLOW} Sanmaxx ${NC}"
 echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${GREEN}    [ SSH Ws: ${GREEN}ON${NC} ]    [ NGINX: ${status_nginx} ]   [ XRAY : ${status_xray} ] "
 echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
@@ -196,16 +200,14 @@ echo -e "${GREEN}┌────────────────────
 echo -e "${CYAN}      SSH     VMESS     VLESS     TROJAN     SDSK ${NC}"
 echo -e "${YELLOW}       $ssh1        $vma         $vla          $tra         $ssa ${NC}"
 echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}               .::: MENU TUNNELING :::.                   ${NC} "
-echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}    ${YELLOW}1.${NC} ${CYAN}SSH OVPN MANAGER${NC}         ${YELLOW}6.${NC} ${CYAN}BACKUP/RESTORE ${NC}"
 echo -e "${CYAN}    ${YELLOW}2.${NC} ${CYAN}VMESS MANAGER${NC}            ${YELLOW}7.${NC} ${CYAN}SETTING  ${NC}"
 echo -e "${CYAN}    ${YELLOW}3.${NC} ${CYAN}VLESS MANAGER${NC}            ${YELLOW}8.${NC} ${CYAN}UPDATE SCRIPT   ${NC} "
 echo -e "${CYAN}    ${YELLOW}4.${NC} ${CYAN}TROJAN MANAGER${NC}           ${YELLOW}9.${NC} ${CYAN}ADD HOST/DOMAIN   ${NC} "
 echo -e "${CYAN}    ${YELLOW}5.${NC} ${CYAN}SHODOWSOK MANAGER${NC}       ${YELLOW}10.${NC} ${CYAN}INSTALL UDP  ${NC} "
 echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}                 .::: Version 1.5 :::.                    ${NC} "
+echo -e "${CYAN}   Clients Name${NC}      =${LIGHT} $Name ${NC}"
+echo -e "${CYAN}   Script Exfire${NC}     =${RED} $dayleft Days ${NC}"
 echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo ""
 echo -ne " Select menu : "; read opt
