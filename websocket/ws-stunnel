@@ -1,4 +1,6 @@
-import socket, threading, thread, select, signal, sys, time, getopt
+##    parse_args(sys.argv[1:])
+if __name__ == '__main__':
+    main()import socket, threading, thread, select, signal, sys, time, getopt
 
 # Listen
 LISTENING_ADDR = '127.0.0.1'
