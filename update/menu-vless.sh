@@ -187,7 +187,7 @@ sed -i '/#vless$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-vlesslink1="vless://${uuid}@bug.com:$tls?path=/vlessws&security=tls&host=${domain}&type=ws&sni${domain}#${user}"
+vlesslink1="vless://${uuid}@bug.com:$tls?path=/vlessws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
 vlesslink2="vless://${uuid}@bug.com:$none?path=/vlessws&host=${domain}&type=ws#${user}"
 vlesslink3="vless://${uuid}@bug.com:$tls?mode=gun&security=tls&host=${domain}&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}"
 systemctl restart xray
@@ -196,7 +196,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e " ${COLBG1}  • CREATE VLESS USER •     ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " Remarks       : ${user}" 
-echo -e " Isp           : ${ISP}" 
+echo -e " Isp           : ${isp}" 
 echo -e " Expired On    : $exp" 
 echo -e " Domain        : ${domain}" 
 echo -e " port TLS      : $tls" 
@@ -234,7 +234,7 @@ sed -i '/#vless$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-vlesslink1="vless://${uuid}@bug.com:$tls?path=/vlessws&security=tls&host=${domain}&type=ws&sni${domain}#${user}"
+vlesslink1="vless://${uuid}@bug.com:$tls?path=/vlessws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
 vlesslink2="vless://${uuid}@bug.com:$none?path=/vlessws&host=${domain}&type=ws#${user}"
 vlesslink3="vless://${uuid}@bug.com:$tls?mode=gun&security=tls&host=${domain}&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}"
 systemctl restart xray
@@ -243,7 +243,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e " ${COLBG1}   • CREATE VLESS USER •    ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " Remarks       : ${user}" 
-echo -e " Isp           : ${ISP}" 
+echo -e " Isp           : ${isp}" 
 echo -e " Expired On    : $exp" 
 echo -e " Domain        : ${domain}" 
 echo -e " port TLS      : $tls" 
