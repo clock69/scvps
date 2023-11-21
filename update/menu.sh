@@ -20,8 +20,8 @@ checking_sc() {
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      \033[0;36mTelegram${NC} t.me/sanmaxx"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6285155208019"
+    echo -e "      \033[0;36mTelegram${NC} t.me/"
+    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6287864255389"
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit
   fi
@@ -32,11 +32,11 @@ clear
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Paper890/izin/main/IP | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/clock69/izin/main/IP | grep $MYIP | awk '{print $2}')
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Paper890/izin/main/IP | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/clock69/izin/main/IP | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
