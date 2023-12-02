@@ -146,6 +146,7 @@ if [ -z $masaaktif ]; then
 masaaktif="1"
 fi
 exp=$(grep -E "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
@@ -161,6 +162,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e "   [INFO]  $user Account Renewed Successfully"
 echo -e "   "
 echo -e "   Client Name : $user"
+echo -e "   Isp         : $ISP"
 echo -e "   Days Added  : $masaaktif Days"
 echo -e "   Expired On  : $exp4"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -212,7 +214,8 @@ clear
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " ${COLBG1}  • CREATE TROJAN USER •    ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$COLOR1 ${NC} Remarks     : ${user}" 
+echo -e "$COLOR1 ${NC} Remarks     : ${user}"
+echo -e "$COLOR1 ${NC} Isp         : $ISP"
 echo -e "$COLOR1 ${NC} Expired On  : $exp" 
 echo -e "$COLOR1 ${NC} Host/IP     : ${domain}" 
 echo -e "$COLOR1 ${NC} Port        : ${tr}" 
@@ -252,6 +255,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e " ${COLBG1}  • CREATE TROJAN USER •    ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$COLOR1 ${NC} Remarks     : ${user}" 
+echo -e "$COLOR1 ${NC} Isp         : $ISP"
 echo -e "$COLOR1 ${NC} Expired On  : $exp" 
 echo -e "$COLOR1 ${NC} Host/IP     : ${domain}" 
 echo -e "$COLOR1 ${NC} Port        : ${tr}" 
