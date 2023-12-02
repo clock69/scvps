@@ -81,6 +81,7 @@ if [ -z $masaaktif ]; then
 masaaktif="1"
 fi
 exp=$(grep -E "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
@@ -96,6 +97,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e "   [INFO]  $user Account Renewed Successfully"
 echo -e "   "
 echo -e "   Client Name : $user"
+echo -e "   Isp         : $ISP"
 echo -e "   Days Added  : $masaaktif Days"
 echo -e "   Expired On  : $exp4"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
@@ -255,6 +257,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e " ${COLBG1}  • CREATE VMESS USER •     ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$COLOR1 ${NC} Remarks       : ${user}"
+echo -e "$COLOR1 ${NC} Isp           : $ISP"
 echo -e "$COLOR1 ${NC} Expired On    : $exp" 
 echo -e "$COLOR1 ${NC} Domain        : ${domain}" 
 echo -e "$COLOR1 ${NC} Port TLS      : ${tls}" 
@@ -290,6 +293,7 @@ user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -356,6 +360,7 @@ echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━�
 echo -e " ${COLBG1}   • CREATE VMESS USER •    ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$COLOR1 ${NC} Remarks       : ${user}"
+echo -e "$COLOR1 ${NC} Isp           : $ISP"
 echo -e "$COLOR1 ${NC} Expired On    : $exp" 
 echo -e "$COLOR1 ${NC} Domain        : ${domain}" 
 echo -e "$COLOR1 ${NC} Port TLS      : ${tls}" 
