@@ -86,6 +86,7 @@ if [ -z $masaaktif ]; then
 masaaktif="1"
 fi
 exp=$(grep -E "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
