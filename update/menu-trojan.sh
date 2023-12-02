@@ -203,6 +203,7 @@ done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "   Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
@@ -243,6 +244,7 @@ user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
