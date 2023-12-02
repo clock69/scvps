@@ -155,6 +155,7 @@ fi
 
 function addvless(){
 domain=$(cat /etc/xray/domain)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " ${COLBG1}          • CREATE VLESS USER •         ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -224,6 +225,7 @@ menu-vless
 
 function trialvless(){
 domain=$(cat /etc/xray/domain)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
