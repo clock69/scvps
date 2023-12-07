@@ -158,6 +158,7 @@ function addvmess(){
 clear
 source /var/lib/ssnvpn-pro/ipvps.conf
 domain=$(cat /etc/xray/domain)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " ${COLBG1}         • CREATE VMESS USER •          ${NC} "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -294,7 +295,6 @@ user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
