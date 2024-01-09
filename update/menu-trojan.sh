@@ -147,6 +147,7 @@ masaaktif="1"
 fi
 exp=$(grep -E "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+domain=$(cat /etc/xray/domain)
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
@@ -165,6 +166,7 @@ echo -e "Client Name : $user"
 echo -e "Isp : $ISP"
 echo -e "Days Added : $masaaktif Days"
 echo -e "Expired On : $exp4"
+echo -e "Domain : ${domain}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;36mTHANKS FOR USING OUR SERVICE\033[0m"
 echo ""
