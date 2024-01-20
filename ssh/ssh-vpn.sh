@@ -144,12 +144,12 @@ cd
 mkdir /home/vps
 mkdir /home/vps/public_html
 wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/clock69/scvps/main/ssh/multiport"
-wget -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/clock69/scvr/main/htaccess"
+wget -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/clock69/scvps/main/ssh/.htaccess"
 mkdir /home/vps/public_html/ss-ws
 mkdir /home/vps/public_html/clash-ws
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/clock69/scvps/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Paper890/mysc/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
