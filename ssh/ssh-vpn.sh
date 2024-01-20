@@ -13,11 +13,11 @@ ver=$VERSION_ID
 #detail nama perusahaan
 country=ID
 state=INDONESIA
-locality=JAWATENGAH
+locality=Kalimantan
 organization=Blogger
 organizationalunit=Blogger
 commonname=none
-email=admin@sedang.my.id
+email=admin@gasken.my.id
 
 # simple password minimal
 curl -sS https://raw.githubusercontent.com/clock69/scvps/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
